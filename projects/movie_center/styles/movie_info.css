@@ -1,0 +1,111 @@
+/* movie_info.html styles */
+.behind-container {
+  background-color: black;
+  padding: 25% 10% 0 10%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.custom_container {
+  background-color: rgba(213,213,213,0.7);
+  border-radius: 5px;
+}
+
+#column_one {
+  padding: 5px;
+}
+
+#column_two {
+  padding: 5px;
+}
+
+#column_three {
+  border-radius: 4px;
+  /* opacity: .6; */
+  padding: 5px;
+}
+
+#movie_runtime {
+  font-size: 12px
+}
+
+#movie_poster {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0,0,0);
+}
+
+#trailer_btn {
+  margin-top: 5px;
+}
+
+#imdb_logo {
+  width: 31px;
+  height: 14px;
+}
+
+#movie_title {
+  margin-bottom: 0;
+}
+
+.director_link {
+  cursor: pointer;
+}
+
+.imdb_li_btn {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#cast_row {
+  height: 100px;
+}
+
+.cast_member {
+  background-color: rgb(255,255,255,.6);
+  /* border: 1px solid rgba(255,255,255); */
+  padding: 2px;
+}
+
+.name_character_div {
+  margin-left: 10px;
+}
+
+.cast_member_name {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.cast_member_character {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.cast_member_image {
+  padding: 0 2px 0 0;
+  width: 66.5px;
+  height: 100px;
+
+}
+
+/* Trailer Modal */
+.modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+}
+.modal-body {
+  position:relative;
+  padding:0px;
+}
+.close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}
