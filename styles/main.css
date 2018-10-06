@@ -5,8 +5,7 @@
 }
 
 .bg-dark {
-    background-color: black;
-    opacity: .8;
+    background-color: grey;
 }
 
 .nav-item, .navbar-brand {
@@ -14,7 +13,8 @@
 }
 
 #about-me {
-    background-color: #FFF59D;
+    background-color: black;
+    color: white;
     padding: 50px;
 }
 
@@ -44,31 +44,3 @@
 }
 
 /* Set a specific color for each brand */
-
-/* Facebook */
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-     padding-left: 17p;
-}
-
-/* Twitter */
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
-    padding-left: 17px;
-}
-
-/* Github */
-.fa-github {
-    background-color: black;
-    color: white;
-    padding-left: 17px;
-}
-
-/* LinkedIn */
-.fa-linkedin {
-    background-color: #0D47A1;
-    color: white;
-    padding-left: 17px;
-}
