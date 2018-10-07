@@ -1,11 +1,12 @@
 .profile-img {
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
     margin-left: 25%;
+    padding-bottom: 5px;
 }
 
 .bg-dark {
-    background-color: grey;
+    background-color: #707070;
 }
 
 .nav-item, .navbar-brand {
@@ -13,17 +14,20 @@
 }
 
 #about-me {
-    background-color: black;
-    color: white;
+    background-color: #cfcfcf;
+    color: black;
     padding: 50px;
 }
 
 #portfolio {
+    background-color: #cfcfcf;
+    color: black;
     padding: 50px;
 }
 
 #contact-me {
-    background-color: #FFD600;
+    background-color: #cfcfcf;
+    color: black;
     padding: 50px;
 }
 
