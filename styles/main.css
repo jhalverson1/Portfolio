@@ -13,6 +13,14 @@
     color: white;
 }
 
+body {
+  background-color: white;
+}
+
+.site-section {
+  padding: 10px;
+}
+
 #about-me {
     background-color: #cfcfcf;
     color: black;
