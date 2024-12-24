@@ -33,7 +33,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# IDE specific files
+# IDE specific files.
 .vscode
 .idea
 *.swp
