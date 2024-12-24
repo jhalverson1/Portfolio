@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/Portfolio' : '';
+  
   return (
     <section className="py-20 md:py-28" style={{ padding: "5rem 0" }}>
       <div className="grid md:grid-cols-2 gap-8 items-center" style={{ display: "grid", gap: "2rem", alignItems: "center" }}>
@@ -47,7 +49,7 @@ const Hero = () => {
             }}
           >
             <Image
-              src={`/Portfolio/IMG_0008.JPG`}
+              src={`${basePath}/IMG_0008.JPG`}
               alt="Profile picture"
               width={256}
               height={256}
