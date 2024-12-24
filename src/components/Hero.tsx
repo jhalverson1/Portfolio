@@ -4,9 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
-  const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
-  const basePath = isGitHubPages ? '/Portfolio' : '';
-  
   return (
     <section className="py-20 md:py-28" style={{ padding: "5rem 0" }}>
       <div className="grid md:grid-cols-2 gap-8 items-center" style={{ display: "grid", gap: "2rem", alignItems: "center" }}>
@@ -50,7 +47,7 @@ const Hero = () => {
             }}
           >
             <Image
-              src="/IMG_0008.JPG"
+              src={process.env.NEXT_PUBLIC_BASE_PATH ? `${process.env.NEXT_PUBLIC_BASE_PATH}/IMG_0008.JPG` : '/IMG_0008.JPG'}
               alt="Profile picture"
               width={256}
               height={256}

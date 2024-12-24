@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
-const isProduction = process.env.NODE_ENV === 'production' && process.env.GITHUB_ACTIONS;
-
 const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  basePath: isProduction ? '/Portfolio' : '',
-  assetPrefix: isProduction ? '/Portfolio' : '',
+  basePath: process.env.GITHUB_ACTIONS === 'true' ? '/Portfolio' : '',
+  assetPrefix: process.env.GITHUB_ACTIONS === 'true' ? '/Portfolio/' : '',
   trailingSlash: true,
   optimizeFonts: true,
 }
