@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="flex justify-center">
           <div className="relative w-48 h-48 md:w-64 md:h-64">
             <Image
-              src="/IMG_0008.JPG"
+              src="/Portfolio/IMG_0008.JPG"
               alt="Profile picture"
               fill
               className="object-cover rounded-full shadow-lg"
