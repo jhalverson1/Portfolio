@@ -23,7 +23,7 @@ npm run dev
 npm run build
 
 ## Live Site
-Visit my portfolio at: https://jonhalverson.github.io/Portfolio
+Visit my portfolio at: https://jhalverson1.github.io/Portfolio
 
 ## Features
 - Responsive design

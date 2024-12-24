@@ -1,59 +1,51 @@
-import Link from "next/link";
-import { SocialLinkType } from "@/types";
+"use client";
 
-const socialLinks: SocialLinkType[] = [
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
+import type { IconType } from "react-icons";
+
+interface SocialLink {
+  icon: IconType;
+  url: string;
+  label: string;
+}
+
+const socialLinks: SocialLink[] = [
   {
-    platform: "GitHub",
-    url: "https://github.com/jonhalverson",
-    icon: "github",
+    icon: FaGithub,
+    url: "https://github.com/jhalverson1",
+    label: "GitHub"
   },
   {
-    platform: "LinkedIn",
+    icon: FaLinkedin,
     url: "https://linkedin.com/in/jonhalverson",
-    icon: "linkedin",
+    label: "LinkedIn"
   },
 ];
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <Link 
-              href="/"
-              className="text-xl font-bold"
-              aria-label="Home"
-            >
-              Jon Halverson
-            </Link>
-            <p className="mt-2 text-gray-400">
-              Building digital experiences that matter
-            </p>
+          <div className="text-center md:text-left mb-4 md:mb-0">
+            <p className="text-gray-400">© 2024 Jon Halverson. All rights reserved.</p>
           </div>
-
           <div className="flex space-x-6">
             {socialLinks.map((link) => (
               <Link
-                key={link.platform}
+                key={link.label}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
-                aria-label={`Visit my ${link.platform} profile`}
+                aria-label={`Visit my ${link.label} profile`}
               >
-                <span className="sr-only">{link.platform}</span>
-                {/* You can add icons here using your preferred icon library */}
-                {link.platform}
+                <link.icon className="w-6 h-6" />
+                <span className="sr-only">{link.label}</span>
               </Link>
             ))}
           </div>
-        </div>
-
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>© {currentYear} Jon Halverson. All rights reserved.</p>
         </div>
       </div>
     </footer>
