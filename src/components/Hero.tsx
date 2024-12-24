@@ -47,12 +47,12 @@ const Hero = () => {
             }}
           >
             <Image
-              src="/Portfolio/IMG_0008.JPG"
+              src={`/Portfolio/IMG_0008.JPG`}
               alt="Profile picture"
-              fill
+              width={256}
+              height={256}
               className="object-cover rounded-full shadow-lg"
               priority
-              sizes="(max-width: 768px) 192px, 256px"
               style={{ 
                 objectFit: "cover",
                 borderRadius: "9999px"
