@@ -25,7 +25,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "serve out",
-    "lint": "next lint"
+    "start": "npx serve@latest out",
+    "lint": "next lint",
+    "clean": "rm -rf .next out"
   }
 }
