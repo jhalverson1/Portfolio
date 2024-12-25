@@ -11,12 +11,9 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900" style={{ fontSize: "2.5rem", fontWeight: "bold", color: "#111827" }}>
             Hi, I'm <span className="text-blue-600" style={{ color: "#2563EB" }}>Jon Halverson</span>
           </h1>
-          <p className="text-xl text-gray-600" style={{ fontSize: "1.25rem", color: "#4B5563" }}>
-            A passionate full-stack developer crafting beautiful and functional web experiences
-          </p>
           <div className="flex gap-4" style={{ display: "flex", gap: "1rem" }}>
             <Link
-              href="#projects"
+              href="/projects"
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               style={{ padding: "0.75rem 1.5rem", backgroundColor: "#2563EB", color: "white", borderRadius: "0.5rem" }}
               aria-label="View my work"
@@ -24,7 +21,7 @@ const Hero = () => {
               View My Work
             </Link>
             <Link
-              href="#contact"
+              href="/contact"
               className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
               style={{ padding: "0.75rem 1.5rem", border: "2px solid #2563EB", color: "#2563EB", borderRadius: "0.5rem" }}
               aria-label="Contact me"

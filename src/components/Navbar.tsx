@@ -31,13 +31,6 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <Link 
-              href="/about"
-              className={`${isActive('/about')} hover:text-gray-900 transition-colors`}
-              aria-label="About section"
-            >
-              About
-            </Link>
-            <Link 
               href="/projects"
               className={`${isActive('/projects')} hover:text-gray-900 transition-colors`}
               aria-label="Projects section"
@@ -81,13 +74,6 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link
-                href="/about"
-                className={`block px-3 py-2 ${isActive('/about')} hover:text-gray-900`}
-                onClick={handleToggleMenu}
-              >
-                About
-              </Link>
               <Link
                 href="/projects"
                 className={`block px-3 py-2 ${isActive('/projects')} hover:text-gray-900`}
