@@ -2,12 +2,18 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const isActive = (path: string) => {
+    return pathname === path ? "text-blue-600" : "text-gray-600";
   };
 
   return (
@@ -25,22 +31,22 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <Link 
-              href="#about"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              href="/about"
+              className={`${isActive('/about')} hover:text-gray-900 transition-colors`}
               aria-label="About section"
             >
               About
             </Link>
             <Link 
-              href="#projects"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              href="/projects"
+              className={`${isActive('/projects')} hover:text-gray-900 transition-colors`}
               aria-label="Projects section"
             >
               Projects
             </Link>
             <Link 
-              href="#contact"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              href="/contact"
+              className={`${isActive('/contact')} hover:text-gray-900 transition-colors`}
               aria-label="Contact section"
             >
               Contact
@@ -76,22 +82,22 @@ const Navbar = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
-                href="#about"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900"
+                href="/about"
+                className={`block px-3 py-2 ${isActive('/about')} hover:text-gray-900`}
                 onClick={handleToggleMenu}
               >
                 About
               </Link>
               <Link
-                href="#projects"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900"
+                href="/projects"
+                className={`block px-3 py-2 ${isActive('/projects')} hover:text-gray-900`}
                 onClick={handleToggleMenu}
               >
                 Projects
               </Link>
               <Link
-                href="#contact"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900"
+                href="/contact"
+                className={`block px-3 py-2 ${isActive('/contact')} hover:text-gray-900`}
                 onClick={handleToggleMenu}
               >
                 Contact
@@ -104,4 +110,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;
