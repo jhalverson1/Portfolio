@@ -1,19 +1,53 @@
 import { ProjectType } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const projects: ProjectType[] = [
   {
     id: 1,
-    title: "Project One",
-    description: "A brief description of your first project and its key features.",
-    technologies: ["React", "TypeScript", "TailwindCSS"],
-    githubUrl: "https://github.com/yourusername/project-one",
-    liveUrl: "https://project-one.com",
-    imageUrl: "/project-1.jpg",
+    title: "TrivAI",
+    description: "An AI-powered trivia game platform that generates unique questions and provides interactive learning experiences.",
+    technologies: ["React", "Node.js", "OpenAI", "TailwindCSS"],
+    liveUrl: "https://trivai-production-1311.up.railway.app/",
+    imageUrl: "/trivai-preview.jpg",
   },
-  // Add more projects as needed
+  {
+    id: 2,
+    title: "CineFiles",
+    description: "A movie database application that allows users to discover, search, and explore detailed information about films.",
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
+    liveUrl: "https://frontend-production-a118.up.railway.app/",
+    imageUrl: "/cinefiles-preview.jpg",
+  },
 ];
+
+const ProjectImage = ({ project }: { project: ProjectType }) => {
+  const [imageError, setImageError] = useState(false);
+
+  if (imageError) {
+    return (
+      <div 
+        className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-4"
+        aria-label={`${project.title} placeholder`}
+      >
+        <h3 className="text-xl font-semibold text-white text-center">
+          {project.title}
+        </h3>
+      </div>
+    );
+  }
+
+  return (
+    <Image
+      src={project.imageUrl}
+      alt={project.title}
+      fill
+      className="object-cover"
+      onError={() => setImageError(true)}
+    />
+  );
+};
 
 const Projects = () => {
   return (
@@ -27,12 +61,7 @@ const Projects = () => {
               className="bg-white rounded-lg shadow-lg overflow-hidden"
             >
               <div className="relative h-48">
-                <Image
-                  src={project.imageUrl}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
+                <ProjectImage project={project} />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
