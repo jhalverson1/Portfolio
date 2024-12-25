@@ -37,13 +37,6 @@ const Navbar = () => {
             >
               Projects
             </Link>
-            <Link 
-              href="/contact"
-              className={`${isActive('/contact')} hover:text-gray-900 transition-colors`}
-              aria-label="Contact section"
-            >
-              Contact
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -80,13 +73,6 @@ const Navbar = () => {
                 onClick={handleToggleMenu}
               >
                 Projects
-              </Link>
-              <Link
-                href="/contact"
-                className={`block px-3 py-2 ${isActive('/contact')} hover:text-gray-900`}
-                onClick={handleToggleMenu}
-              >
-                Contact
               </Link>
             </div>
           </div>

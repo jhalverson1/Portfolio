@@ -11,6 +11,13 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900" style={{ fontSize: "2.5rem", fontWeight: "bold", color: "#111827" }}>
             Hi, I'm <span className="text-blue-600" style={{ color: "#2563EB" }}>Jon Halverson</span>
           </h1>
+          <p className="text-gray-600">
+            I'm always interested in connecting with fellow developers and potential collaborators. Feel free to reach out at{' '}
+            <a href="mailto:jonhalverson9@gmail.com" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+              jonhalverson9@gmail.com
+            </a>
+            {' '}to start a conversation.
+          </p>
           <div className="flex gap-4" style={{ display: "flex", gap: "1rem" }}>
             <Link
               href="/projects"
@@ -19,14 +26,6 @@ const Hero = () => {
               aria-label="View my work"
             >
               View My Work
-            </Link>
-            <Link
-              href="/contact"
-              className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-              style={{ padding: "0.75rem 1.5rem", border: "2px solid #2563EB", color: "#2563EB", borderRadius: "0.5rem" }}
-              aria-label="Contact me"
-            >
-              Contact Me
             </Link>
           </div>
         </div>
